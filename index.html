@@ -11,13 +11,13 @@
   <button id='delete'>Delete Data</button>
   <button id='put'>Put Data</button>
   <script>
-    fetch('http://localhost:3000/client-y')
+    fetch('cors-production-0c4c.up.railway.app')
       .then(response => response.json())
       .then(data => document.getElementById('message').textContent = data.message)
       .catch(error => document.getElementById('message').textContent = error);
 
     document.getElementById('get').addEventListener('click', function() {
-      fetch('http://localhost:3000/client-y', {
+      fetch('cors-production-0c4c.up.railway.app/client-y', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
