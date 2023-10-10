@@ -11,7 +11,7 @@
   <button id='delete'>Delete Data</button>
   <button id='put'>Put Data</button>
   <script>
-    fetch('https://cors-production-0c4c.up.railway.app')
+    fetch('https://cors-production-0c4c.up.railway.app/client-y')
       .then(response => response.json())
       .then(data => document.getElementById('message').textContent = data.message)
       .catch(error => document.getElementById('message').textContent = error);
@@ -31,7 +31,7 @@
     });
 
     document.getElementById('post').addEventListener('click', function() {
-      fetch('http://localhost:3000/client-y', {
+      fetch('https://cors-production-0c4c.up.railway.app/client-y', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@
     });
 
     document.getElementById('delete').addEventListener('click', function() {
-      fetch('http://localhost:3000/client-y', {
+      fetch('https://cors-production-0c4c.up.railway.app/client-y', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -59,7 +59,7 @@
     });
 
     document.getElementById('put').addEventListener('click', function() {
-      fetch('http://localhost:3000/client-y', {
+      fetch('https://cors-production-0c4c.up.railway.app/client-y', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
